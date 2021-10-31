@@ -27,12 +27,16 @@
     "build": "react-scripts build",
     "test": "react-scripts test",
     "eject": "react-scripts eject",
-    "lint": "eslint src"
+    "lint": "eslint src",
+    "lint:fix": "eslint . --ext .js --ext .jsx --fix",
+    "lint:staged": "lint-staged",
+    "prepare": "husky install"
   },
-  "husky": {
-    "hooks": {
-      "pre-commit": "npm run lint"
-    }
+  "lint-staged": {
+    "*.{js,jsx,ts,tsx}": [
+      "eslint . --ext .js --ext .jsx --fix",
+      "git add"
+    ]
   },
   "eslintConfig": {
     "extends": [
@@ -53,13 +57,13 @@
     ]
   },
   "devDependencies": {
-    "eslint": "^8.1.0",
+    "eslint": "^6.6.0",
     "eslint-config-airbnb": "^18.2.1",
     "eslint-plugin-import": "^2.25.2",
     "eslint-plugin-jsx-a11y": "^6.4.1",
     "eslint-plugin-react": "^7.26.1",
     "eslint-plugin-react-hooks": "^4.2.0",
-    "husky": "^7.0.4",
+    "husky": "^7.0.0",
     "lint-staged": "^11.2.6"
   }
 }
