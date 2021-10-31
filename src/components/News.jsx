@@ -21,8 +21,6 @@ const News = ({ simplified }) => {
     return <Loader />;
   }
 
-  let aaa = 'aaa';
-
   return (
     <Row gutter={[ 24, 24 ]}>
       {!simplified && (
@@ -60,7 +58,6 @@ const News = ({ simplified }) => {
           </Card>
         </Col>
       ))}
-      <div>{aaa}</div>
     </Row>
   );
 };
