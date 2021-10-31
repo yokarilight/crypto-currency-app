@@ -21,7 +21,7 @@ const News = ({ simplified }) => {
     return <Loader />;
   }
 
-  const aaa = "aaa";
+  let aaa = 'aaa';
 
   return (
     <Row gutter={[ 24, 24 ]}>
